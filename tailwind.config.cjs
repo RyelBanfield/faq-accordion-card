@@ -8,7 +8,12 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'soft-violet': 'hsl(273, 75%, 66%)',
+        'soft-blue': 'hsl(240, 73%, 65%)',
+      },
+    },
     fontFamily: {
       sans: ['Kumbh Sans', ...defaultTheme.fontFamily.sans],
     },

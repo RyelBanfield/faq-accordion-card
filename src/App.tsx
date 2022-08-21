@@ -16,13 +16,6 @@
 // - Very dark desaturated blue: hsl(238, 29%, 16%)
 // - Soft red: hsl(14, 88%, 65%)
 
-// #### Gradient
-
-// Background gradient:
-
-// - Soft violet: hsl(273, 75%, 66%)
-// - Soft blue: hsl(240, 73%, 65%)
-
 // ### Neutral
 
 // #### Text
@@ -34,21 +27,9 @@
 
 // - Light grayish blue: hsl(240, 5%, 91%)
 
-// ## Typography
-
-// ### Body Copy
-
-// - Font size: 12px
-
-// ### Font
-
-// - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
-// - Weights: 400, 700
-
 const App = () => (
-  <div className="flex h-screen flex-col items-center justify-center">
-    <h1 className="text-xl font-bold">create-r1-app</h1>
-    <p className="text-xl">Begin by editing src/App.tsx</p>
+  <div className="flex h-screen flex-col items-center justify-center bg-gradient-to-b from-soft-violet to-soft-blue text-xs">
+    <div className="h-3/4 w-3/4 rounded-3xl bg-white" />
   </div>
 );
 
