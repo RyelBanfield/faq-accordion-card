@@ -4,7 +4,6 @@ import MobileIllustration from '/src/assets/illustration-woman-online-mobile.svg
 
 const MobileImg = () => (
   <>
-    {' '}
     <img
       src={MobileIllustration}
       alt="Illustration of woman online"
