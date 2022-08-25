@@ -1,6 +1,6 @@
 /* eslint-disable import/no-absolute-path */
 
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 
 import Arrow from '/src/assets/icon-arrow-down.svg';
 
@@ -10,21 +10,32 @@ type Props = {
 };
 
 const Accordion = ({ title, body }: Props) => (
-  <div className="mx-6 border-b text-xs text-dark-grayish-blue">
+  <div className="mb-4 border-b border-light-grayish-blue text-xs text-dark-grayish-blue">
     <Disclosure>
       {({ open }) => (
         <>
-          <Disclosure.Button className="flex w-full flex-row justify-between pb-5">
+          <Disclosure.Button className="mb-4 flex w-full flex-row justify-between">
             <span
               className={
-                open ? 'font-bold text-very-dark-desaturated-blue' : ''
+                open
+                  ? 'font-bold text-very-dark-desaturated-blue hover:text-soft-red'
+                  : 'hover:text-soft-red'
               }
             >
               {title}
             </span>
             <img src={Arrow} alt="Arrow" className={open ? 'rotate-180' : ''} />
           </Disclosure.Button>
-          <Disclosure.Panel className="pb-5">{body}</Disclosure.Panel>
+          <Transition
+            enter="transition duration-100 ease-out"
+            enterFrom="transform scale-95 opacity-0"
+            enterTo="transform scale-100 opacity-100"
+            leave="transition duration-75 ease-out"
+            leaveFrom="transform scale-100 opacity-100"
+            leaveTo="transform scale-95 opacity-0"
+          >
+            <Disclosure.Panel className="mb-4 pr-5">{body}</Disclosure.Panel>
+          </Transition>
         </>
       )}
     </Disclosure>

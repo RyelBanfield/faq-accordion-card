@@ -22,6 +22,9 @@ module.exports = {
     fontFamily: {
       sans: ['Kumbh Sans', ...defaultTheme.fontFamily.sans],
     },
+    screens: {
+      sm: '930px',
+    },
   },
   plugins: [],
 };
